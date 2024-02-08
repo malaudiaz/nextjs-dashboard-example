@@ -126,6 +126,18 @@ export async function deleteInvoice(id: string) {
   }
 }
 
+export async function deleteProducts(id: string) {
+  // throw new Error('Failed to Delete Invoice');
+
+  try {
+    await sql`DELETE FROM products WHERE id = ${id}`;
+    revalidatePath('/dashboard/products');
+    return { message: 'Deleted Products' };
+  } catch (error) {
+    return { message: 'Database Error: Failed to Delete Productos.' };
+  }
+}
+
 export async function authenticate(
   prevState: string | undefined,
   formData: FormData,

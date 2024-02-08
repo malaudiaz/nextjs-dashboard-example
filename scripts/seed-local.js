@@ -21,6 +21,18 @@ async function clear() {
     console.log(`Cleared ${clearResult.length} table users`);
 
     clearResult = await sql`
+      DROP TABLE IF EXISTS invoices;
+    `;
+
+    console.log(`Cleared ${clearResult.length} table invoices`);
+
+    clearResult = await sql`
+      DROP TABLE IF EXISTS customers;
+    `;
+
+    console.log(`Cleared ${clearResult.length} table customers`);
+
+    clearResult = await sql`
       DROP TABLE IF EXISTS products;
     `;
 
