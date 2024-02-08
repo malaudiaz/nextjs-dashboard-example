@@ -188,7 +188,7 @@ const products = [
     color: "BEIGE",
     price: 3.78,
     stock: 18,
-    image_url: '/products/blusa_de_jovencita.jpg',
+    image_url: '/products/blusa_de_jovencita.png',
   },
   {
     id: "c203cb8c-9fd9-4651-9e95-ba8fbf60fafa",
@@ -197,7 +197,7 @@ const products = [
     color: "BLANCO",
     price: 83.69,
     stock: 25,
-    image_url: '/products/calzado_deportivo_adidas.jpg',
+    image_url: '/products/calzado_deportivo_adidas.png',
   },
   {
     id: "1669a6d1-7881-4a55-8248-2bfd24191657",
@@ -206,7 +206,7 @@ const products = [
     color: "BLANCO/ROJO",
     price: 88.99,
     stock: 30,
-    image_url: '/products/calzado_deportivo_nke.jpg',
+    image_url: '/products/calzado_deportivo_nke.png',
   },
   {
     id: "d621c083-7a22-4baf-8eb8-21c0da33c8a7",
@@ -215,7 +215,7 @@ const products = [
     color: "BLANCO/VERDE",
     price: 88.99,
     stock: 30,
-    image_url: '/products/calzado_sport_reebook.jpg',
+    image_url: '/products/calzado_sport_reebook.png',
   },
   {
     id: "93573381-113e-4779-bc94-e7634f1dce15",
@@ -224,7 +224,7 @@ const products = [
     color: "BLANCO",
     price: 22.88,
     stock: 10,
-    image_url: '/products/camisa_de_hombre.jpg',
+    image_url: '/products/camisa_de_hombre.png',
   },
   {
     id: "6f9bd1bc-607a-4103-bee9-e3e73a5ac913",
@@ -233,7 +233,7 @@ const products = [
     color: "BLANCO/AZUL",
     price: 18.75,
     stock: 10,
-    image_url: '/products/camisa_y_corbata.jpg',
+    image_url: '/products/camisa_y_corbata.png',
   },
   {
     id: "ffebf4e1-7642-416b-9db6-dcb33c0460da",
@@ -242,7 +242,7 @@ const products = [
     color: "VARIOS",
     price: 8.60,
     stock: 15,
-    image_url: '/products/corbatas.jpg',
+    image_url: '/products/corbatas.png',
   },
   {
     id: "fd791d2e-7b69-4cd9-ba03-d9ebc408c751",
@@ -251,7 +251,7 @@ const products = [
     color: "VARIOS",
     price: 16.66,
     stock: 8,
-    image_url: '/products/pantalon_deportivo_hombre.jpg',
+    image_url: '/products/pantalon_deportivo_hombre.png',
   },
   {
     id: "a65e140b-ba18-42de-96a6-cad8dc3afdf2",
@@ -260,7 +260,7 @@ const products = [
     color: "VARIOS",
     price: 4.35,
     stock: 18,
-    image_url: '/products/pulover_deportivos.jpg',
+    image_url: '/products/pulover_deportivos.png',
   },
   {
     id: "c2b23f5d-4bfd-4be6-b0bb-df8969c372d5",
@@ -269,7 +269,7 @@ const products = [
     color: "BEIGE",
     price: 3.55,
     stock: 5,
-    image_url: '/products/pulover_hobre_con_cuello.jpg',
+    image_url: '/products/pulover_hobre_con_cuello.png',
   },
   {
     id: "030b4ff6-a265-462c-95d4-30bf631cc842",
@@ -278,7 +278,7 @@ const products = [
     color: "NEGRO",
     price: 6.15,
     stock: 8,
-    image_url: '/products/pulover_hombre_elegante.jpg',
+    image_url: '/products/pulover_hombre_elegante.png',
   },
 ]
 

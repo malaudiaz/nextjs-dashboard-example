@@ -15,10 +15,6 @@ export default async function ShopPage({
     const query = searchParams?.query || '';
     const currentPage = Number(searchParams?.page) || 1;
   
-    const products = await fetchFilteredProducts(query, currentPage);
-
-    console.log(products);
-
     return (
       <div className="w-full">
         <div className="flex w-full items-center justify-between">

@@ -34,15 +34,15 @@ export default async function ProductsTable({
                       />
                       <p>{product.name}</p>
                     </div>
-                    <p className="text-sm text-gray-500">{product.stock}</p>
+                    <p className="text-sm text-gray-500">{product.description}</p>
                   </div>
                 </div>
                 <div className="flex w-full items-center justify-between pt-4">
                   <div>
                     <p className="text-xl font-medium">
-                      {product.price}
+                      <strong>Price: </strong>{product.price}
                     </p>
-                    <p>{product.description}</p>
+                    <p><strong>Stock: </strong>{product.stock}</p>
                   </div>
                   <div className="flex justify-end gap-2">
                     <UpdateProducts id={product.id} />
