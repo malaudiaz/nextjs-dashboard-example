@@ -14,11 +14,18 @@ const bcrypt = require('bcrypt');
 
 async function clear() {
   try {
-    const clearResult = await sql`
+    let clearResult = await sql`
       DROP TABLE IF EXISTS users;
     `;
 
-    console.log(`Cleared ${clearResult.length} tables`);
+    console.log(`Cleared ${clearResult.length} table users`);
+
+    clearResult = await sql`
+      DROP TABLE IF EXISTS products;
+    `;
+
+    console.log(`Cleared ${clearResult.length} table products`);
+
     return clearResult;
   } catch (err) {
     console.error('Error clearing tables:', err);
