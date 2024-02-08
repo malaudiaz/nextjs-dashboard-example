@@ -15,5 +15,5 @@ export default async function ShopPage({
 
     console.log(products);
 
-    return <h1>Tienda</h1>
+    return <h1>Productos</h1>
 }
