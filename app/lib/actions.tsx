@@ -131,16 +131,13 @@ export async function authenticate(
   formData: FormData,
 ) {
   try {
-    console.log(".......................");
     await signIn('credentials', formData);
   } catch (error) {
     if (error instanceof AuthError) {
       switch (error.type) {
         case 'CredentialsSignin':
-          console.log("*************************");
           return 'Invalid credentials.';
         default:
-          console.log("=========================");
           return 'Something went wrong.';
       }
     }
