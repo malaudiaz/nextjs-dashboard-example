@@ -7,6 +7,7 @@ import { Suspense } from 'react';
 import Pagination from '@/app/ui/invoices/pagination';
 import Search from '@/app/ui/search';
 import { lusitana } from '@/app/ui/fonts';
+import { CreateCustomer } from '@/app/ui/invoices/buttons';
 
 export const metadata: Metadata = {
   title: 'Customers',
@@ -33,6 +34,7 @@ export default async function Page({
         </div>
         <div className="mt-4 flex items-center justify-between gap-2 md:mt-8">
             <Search placeholder="Search customers..." />
+            <CreateCustomer />
         </div>
         <Suspense key={query + currentPage} fallback={<CustomerTableSkeleton />}>
             <CustomersTable query={query} currentPage={currentPage}/>

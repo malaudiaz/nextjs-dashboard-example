@@ -7,7 +7,8 @@ const {
   customers,
   revenue,
   users,
-  products
+  products, 
+  categories
 } = require('../app/lib/placeholder-data.js');
 
 const bcrypt = require('bcrypt');
@@ -220,7 +221,7 @@ async function seedProducts() {
 
     console.log(`Created "products" table`);
 
-    // Insert data into the "customers" table
+    // Insert data into the "products" table
     const insertedProducts = await Promise.all(
       products.map(
         (product) => sql`
@@ -242,7 +243,6 @@ async function seedProducts() {
     throw error;
   }
 }
-
 
 async function main() {
   await clear();

@@ -282,10 +282,29 @@ const products = [
   },
 ]
 
+const categories = [
+  {
+    id: "098e0c0d-c2d1-4691-bf83-aafe5159f17c",
+    name: "Ropa de Jovencito",
+    description: "Ropa moderna para jovenes"
+  },
+  {
+    id: "63696ac1-c737-441b-8446-2ad575476f36",
+    name: "Ropa de Mujer",
+    description: ""
+  },
+  {
+    id: "c623dd2b-4d93-4033-b026-7346bfb98a39",
+    name: "Calzado de Hombres",
+    description: ""
+  }
+]
+
 module.exports = {
   users,
   customers,
   invoices,
   revenue,
-  products
+  products,
+  categories
 };

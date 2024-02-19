@@ -197,8 +197,6 @@ export async function fetchCustomers() {
 
 export async function fetchFilteredCustomers(  query: string, currentPage: number) {
 
-  await new Promise((resolve) => setTimeout(resolve, 4000));
-
   const offset = (currentPage - 1) * ITEMS_PER_PAGE;
 
   try {

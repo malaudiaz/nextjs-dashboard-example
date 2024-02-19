@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import { fetchFilteredCustomers } from '@/app/lib/data-local';
+import { DeleteCustomer, UpdateCustomer } from '../invoices/buttons';
 
 export default async function CustomersTable({
   query,
@@ -53,11 +54,18 @@ export default async function CustomersTable({
                   <div className="pt-4 text-sm">
                     <p>{customer.total_invoices} invoices</p>
                   </div>
+
+                  <div className="flex justify-end gap-2">
+                    <UpdateCustomer id={customer.id} />
+                    <DeleteCustomer id={customer.id} />
+                  </div>
+
+
                 </div>
               ))}
             </div>
             <table className="hidden min-w-full rounded-md text-gray-900 md:table">
-              <thead className="rounded-md bg-gray-50 text-left text-sm font-normal">
+              <thead className="rounded-lg text-left text-sm font-normal">
                 <tr>
                   <th scope="col" className="px-4 py-5 font-medium sm:pl-6">
                     Name
@@ -71,42 +79,56 @@ export default async function CustomersTable({
                   <th scope="col" className="px-3 py-5 font-medium">
                     Total Pending
                   </th>
-                  <th scope="col" className="px-4 py-5 font-medium">
+                  <th scope="col" className="px-3 py-5 font-medium">
                     Total Paid
+                  </th>
+                  <th scope="col" className="relative py-3 pl-6 pr-3">
+                    <span className="sr-only">Edit</span>
                   </th>
                 </tr>
               </thead>
 
-              <tbody className="divide-y divide-gray-200 text-gray-900">
-                {customers.map((customer) => (
-                  <tr key={customer.id} className="group">
-                    <td className="whitespace-nowrap bg-white py-5 pl-4 pr-3 text-sm text-black group-first-of-type:rounded-md group-last-of-type:rounded-md sm:pl-6">
-                      <div className="flex items-center gap-3">
-                        <Image
-                          src={customer.image_url}
-                          className="rounded-full"
-                          alt={`${customer.name}'s profile picture`}
-                          width={28}
-                          height={28}
-                        />
-                        <p>{customer.name}</p>
-                      </div>
-                    </td>
-                    <td className="whitespace-nowrap bg-white px-4 py-5 text-sm">
-                      {customer.email}
-                    </td>
-                    <td className="whitespace-nowrap bg-white px-4 py-5 text-sm">
-                      {customer.total_invoices}
-                    </td>
-                    <td className="whitespace-nowrap bg-white px-4 py-5 text-sm">
-                      {customer.total_pending}
-                    </td>
-                    <td className="whitespace-nowrap bg-white px-4 py-5 text-sm group-first-of-type:rounded-md group-last-of-type:rounded-md">
-                      {customer.total_paid}
-                    </td>
-                  </tr>
-                ))}
-              </tbody>
+
+              <tbody className="bg-white">
+                {customers?.map((customer) => (
+                    <tr
+                      key={customer.id}
+                      className="w-full border-b py-3 text-sm last-of-type:border-none [&:first-child>td:first-child]:rounded-tl-lg [&:first-child>td:last-child]:rounded-tr-lg [&:last-child>td:first-child]:rounded-bl-lg [&:last-child>td:last-child]:rounded-br-lg"
+                    >
+                      <td className="whitespace-nowrap py-3 pl-6 pr-3">
+                        <div className="flex items-center gap-3">
+                          <Image
+                            src={customer.image_url}
+                            className="rounded-full"
+                            width={28}
+                            height={28}
+                            alt={`${customer.name}'s customer picture`}
+                          />
+                          <p>{customer.name}</p>
+                        </div>
+                      </td>
+                      <td className="whitespace-nowrap px-3 py-3">
+                        {customer.email}
+                      </td>
+                      <td className="whitespace-nowrap px-3 py-3">
+                        {customer.total_invoices}
+                      </td>
+                      <td className="whitespace-nowrap px-3 py-3">
+                        {customer.total_pending}
+                      </td>
+                      <td className="whitespace-nowrap bg-white px-4 py-5 text-sm group-first-of-type:rounded-md group-last-of-type:rounded-md">
+                        {customer.total_paid}
+                      </td>
+                      <td className="whitespace-nowrap py-3 pl-6 pr-3">
+                        <div className="flex justify-end gap-3">
+                            <UpdateCustomer id={customer.id} />
+                            <DeleteCustomer id={customer.id} />
+                        </div>
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+
             </table>
           </div>
         </div>
